@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaInstagram, FaWhatsapp, FaTiktok, FaTelegramPlane, FaYoutube, FaTshirt } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaTiktok, FaTelegramPlane, FaYoutube, FaTshirt, FaTelegram } from 'react-icons/fa';
 import logo from './logo.jpg';
 import { SlSocialVkontakte } from "react-icons/sl";
 import { TbHandClick } from "react-icons/tb";
@@ -10,6 +10,8 @@ import { BiMailSend } from "react-icons/bi";
 import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Flag from 'react-world-flags';
+import { AiFillInstagram } from 'react-icons/ai';
 
 function App() {
   const [data, setData] = useState(null);
@@ -74,8 +76,37 @@ function App() {
         <img src={logo} alt="Logo" className="rounded-full w-20 h-20 mb-2" />
         <h1 className="text-xl font-semibold">@fashionrynok</h1>
         <p className="text-center text-gray-600 mt-5">
-          Сотни байеров рынка Дордой, объединенные в единое сообщество: Фэшн Рынок
+          Уважаемые клиенты! <br />
+          Мы рады видеть вас на нашей странице. Мы предоставляем следующие услуги: <br />
         </p>
+        <ul className="w-full max-w-md list-disc list-inside text-gray-600 text-sm mt-5 backdrop-blur-md bg-white/30 rounded-lg shadow-md p-6">
+          <li className="mb-3">
+            <span className="font-semibold">Оптовый выкуп товаров различных категорий</span>
+          </li>
+          <li className="mb-3">
+            <span className="font-semibold">Контроль качества и проверка на брак</span>
+          </li>
+          <li className="mb-3">
+            <span className="font-semibold">Услуги фулфилмента для платформ WB и Ozon</span>
+          </li>
+          <li className="mb-3">
+            <span className="font-semibold">Производство индивидуального бренда</span>
+          </li>
+          <li className="mb-3">
+            <span className="font-semibold">Отправка по всему СНГ</span>
+            <div className="flex flex-wrap items-center mt-2 space-x-3">
+              <Flag code="RU" className="w-6 h-6" alt="Россия" />
+              <Flag code="KZ" className="w-6 h-6" alt="Казахстан" />
+              <Flag code="UZ" className="w-6 h-6" alt="Узбекистан" />
+              <Flag code="TJ" className="w-6 h-6" alt="Таджикистан" />
+              <Flag code="BY" className="w-6 h-6" alt="Беларусь" />
+              <Flag code="AZ" className="w-6 h-6" alt="Азербайджан" />
+            </div>
+          </li>
+          <li className="mb-3">
+            <span className="font-semibold">Бизнес тур</span>
+          </li>
+        </ul>
         <div className="flex gap-8 mt-10">
           <a href="https://www.instagram.com/dordoi.fashion/" className="icon-hover"><FaInstagram size={30} className='cursor-pointer' /></a>
           <a href="https://api.whatsapp.com/send?phone=996500996500" className="icon-hover"><FaWhatsapp size={30} className='cursor-pointer' /></a>
@@ -101,29 +132,50 @@ function App() {
         <h2 className="text-center text-lg font-semibold mb-2">НАШИ ПРОЕКТЫ</h2>
         <a href="https://wa.me/996500996500" className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
           <TbHandClick size={30} className="text-lg mr-2" />
-          <p>Фулфилмент</p>
+          <p>Услуги фулфилмента</p>
         </a>
-        <a href="https://wa.me/996774996996" className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
-          <TbHandClick size={30} className="text-lg mr-2" />
-          <p>Фулфилмент 2</p>
+        <a href="https://t.me/optom_muslim" className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
+          <FaTelegram size={30} className="text-lg mr-2" />
+          <p>Мусульманская одежда</p>
         </a>
-        <a href="https://api.whatsapp.com/send/?phone=996500996500&text&type=phone_number&app_absent=0" className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
-          <FaTshirt size={30} className="text-lg mr-2" />
-          <p>Пошив</p>
+        <a href="https://t.me/optom_dordoi_mens" className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
+          <FaTelegram size={30} className="text-lg mr-2" />
+          <p>Оптом Дордой Мужская одежда</p>
         </a>
-        <a className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
-          <BiCheckDouble size={30} className="text-lg mr-2" />
-          <p>Совместные закупки. Бишкек в Vkontakte</p>
+        <a href="https://t.me/optom_dordoi_01" className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
+          <FaTelegram size={30} className="text-lg mr-2" />
+          <p>Оптом Дордой Тренд</p>
+        </a>
+        <a href="https://t.me/plus_size_woman" className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
+          <FaTelegram size={30} className="text-lg mr-2" />
+          <p>Большемеры из Киргизии</p>
+        </a>
+        <a href="https://www.instagram.com/dordoi.kids" className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
+          <AiFillInstagram size={30} className="text-lg mr-2" />
+          <p>Детская одежда</p>
+        </a>
+        <a href="https://www.instagram.com/dordoi_optom_vogue" className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 card-hover">
+          <AiFillInstagram size={30} className="text-lg mr-2" />
+          <p>Женская одежда</p>
         </a>
       </div>
-
+      <div className="w-full max-w-md mt-6">
+        <h2 className="text-center text-lg font-semibold mb-2">НОМЕР ГАРАНТА:</h2>
+        <a href='https://wa.me/996500996500' className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 cursor-pointer card-hover">
+          <FaWhatsapp size={30} className="text-lg mr-2" />
+          <p >+996500996500</p>
+        </a>
+      </div>
+      <p className="text-center text-gray-600 mt-10 mb-10">
+        Мы, команда Фэшн Рынок, <br /> предлагаем вам сервис на высшем уровне. Для нас ваше доверие — бесценно.
+      </p>
       <div className="w-full max-w-md mt-6">
         <h2 className="text-center text-lg font-semibold mb-2">СВЯЖИТЕСЬ С НАМИ</h2>
         <form onSubmit={handleSubmit}>
           <label className=''>
             Ваше имя:
             <input
-              className='w-full outline-none bg-white rounded-md p-4 flex items-center mb-2'
+              className='w-full outline-none bg-white/30 rounded-md p-4 flex items-center mb-2'
               type="text"
               name="name"
               value={form.name}
@@ -134,7 +186,7 @@ function App() {
           <label className=''>
             Номер телефона:
             <input
-              className='w-full outline-none bg-white rounded-md p-4 flex items-center mb-2'
+              className='w-full outline-none bg-white/30 rounded-md p-4 flex items-center mb-2'
               type="text"
               name="phone"
               value={form.phone}
@@ -145,7 +197,7 @@ function App() {
           <label className=''>
             Сообщение:
             <textarea
-              className='w-full min-h-40 outline-none bg-white rounded-md p-4 flex items-center mb-2'
+              className='w-full min-h-40 outline-none bg-white/30 rounded-md p-4 flex items-center mb-2'
               name="message"
               value={form.message}
               onChange={handleChange}
