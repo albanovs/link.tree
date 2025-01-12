@@ -160,10 +160,10 @@ function App() {
         </a>
       </div>
       <div className="w-full max-w-md mt-6">
-        <h2 className="text-center text-lg font-semibold mb-2">НОМЕР ГАРАНТА:</h2>
+        <h2 className="text-center text-lg font-semibold mb-2">ВАШ ГАРАНТ</h2>
         <a href='https://wa.me/996500996500' className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 cursor-pointer card-hover">
           <FaWhatsapp size={30} className="text-lg mr-2" />
-          <p >+996500996500</p>
+          <p >Руководитель команды фэшн рынка</p>
         </a>
       </div>
       <p className="text-center text-gray-600 mt-10 mb-10">
@@ -181,6 +181,7 @@ function App() {
               value={form.name}
               onChange={handleChange}
               required
+              autoComplete='off'
             />
           </label>
           <label className=''>
@@ -192,6 +193,7 @@ function App() {
               value={form.phone}
               onChange={handleChange}
               required
+              autoComplete='off'
             />
           </label>
           <label className=''>
@@ -202,6 +204,7 @@ function App() {
               value={form.message}
               onChange={handleChange}
               required
+              autoComplete='off'
             />
           </label>
           <button
