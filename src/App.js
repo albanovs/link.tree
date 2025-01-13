@@ -51,7 +51,7 @@ function App() {
     setIsLoading(true);
 
     const serviceID = 'service_ipfcz5e';
-    const templateID = 'template_yzqvtbj';
+    const templateID = 'template_0g0wc0m';
     const publicKey = 'NUfYZ7cZxZtpgCf42';
 
     emailjs.send(serviceID, templateID, form, publicKey)
