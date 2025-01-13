@@ -163,7 +163,7 @@ function App() {
         <h2 className="text-center text-lg font-semibold mb-2">ВАШ ГАРАНТ</h2>
         <a href='https://wa.me/996500996500' className="bg-white rounded-md shadow-md p-4 flex items-center mb-2 cursor-pointer card-hover">
           <FaWhatsapp size={30} className="text-lg mr-2" />
-          <p >Руководитель команды фэшн рынка</p>
+          <p >Руководитель команды Фэшн Рынка</p>
         </a>
       </div>
       <p className="text-center text-gray-600 mt-10 mb-10">
